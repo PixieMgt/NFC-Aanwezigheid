@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:249003800747:android:2d476b70e8bfecb7739fee",
         "android_client_info": {
-          "package_name": "be.vives.ti"
+          "package_name": "be.vives.ti.nfc_aanwezigheid"
         }
       },
       "oauth_client": [

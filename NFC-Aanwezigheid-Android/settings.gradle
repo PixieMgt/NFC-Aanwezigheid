@@ -1,2 +1,9 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+rootProject.name = "NFC-Aanwezigheid"
 include ':app'
-rootProject.name='NFCReader'
