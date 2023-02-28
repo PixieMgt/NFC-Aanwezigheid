@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "249003800747",
+    "firebase_url": "https://nfc-aanwezigheid-43972-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "nfc-aanwezigheid-43972",
+    "storage_bucket": "nfc-aanwezigheid-43972.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:249003800747:android:2d476b70e8bfecb7739fee",
+        "android_client_info": {
+          "package_name": "be.vives.ti"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "249003800747-qdo511eevt99fg182vesu09tfmcnjdrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBtsTRuWHkTu5zaIo2epClXwf1T3_0O7GY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "249003800747-qdo511eevt99fg182vesu09tfmcnjdrg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
