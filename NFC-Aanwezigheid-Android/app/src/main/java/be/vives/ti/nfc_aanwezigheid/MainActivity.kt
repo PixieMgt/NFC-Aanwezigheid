@@ -10,8 +10,13 @@ import android.nfc.Tag
 import android.os.Bundle
 import android.util.JsonWriter
 import android.util.Log
+import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import androidx.recyclerview.widget.LinearLayoutManager
+import be.vives.ti.nfc_aanwezigheid.databinding.ActivityMainBinding
 import com.google.firebase.FirebaseApp
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.ktx.database
@@ -27,14 +32,24 @@ class MainActivity : AppCompatActivity() {
     private var adapter: NfcAdapter? = null
     var tag: WritableTag? = null
     var tagId: String? = null
+    private lateinit var binding : ActivityMainBinding
+    private var currentId: String? = ""
     private lateinit var database: DatabaseReference
+    private lateinit var textView : TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(binding.root)
 
         initNfcAdapter()
         initViews()
+
+
+
+
+
     }
 
     private fun initNfcAdapter() {
@@ -102,6 +117,8 @@ class MainActivity : AppCompatActivity() {
             return
         }
         tagId = tag!!.tagId
+        currentId =  tagId
+        textView = findViewById(R.id.idTv)
         val aanwezigheid = Aanwezigheid(tagId, java.sql.Timestamp(System.currentTimeMillis()), "u0807613")
         val aanwezigheidString = Gson().toJson(aanwezigheid)
         Log.i("TESTETSTES", aanwezigheidString)
@@ -109,6 +126,7 @@ class MainActivity : AppCompatActivity() {
         database = Firebase.database.reference
         database.child("Aanwezigheid").setValue(tagId)
         showToast("Tag tapped: $tagId")
+        textView.text = currentId
 
 //        if (NfcAdapter.ACTION_NDEF_DISCOVERED == intent.action) {
 //            val rawMsgs = intent.getParcelableArrayExtra(NfcAdapter.EXTRA_NDEF_MESSAGES)

@@ -18,7 +18,7 @@
         app:layout_constraintEnd_toStartOf="@+id/tag_uid"
         app:layout_constraintStart_toEndOf="@+id/tag_uid"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.39" />
+        app:layout_constraintVertical_bias="0.100000024" />
 
     <TextView
         android:id="@+id/tag_uid"
@@ -35,5 +35,16 @@
         android:layout_marginTop="30dp"
         app:layout_constraintTop_toBottomOf="@+id/tag_uid"
         tools:layout_editor_absoluteX="-12dp" />
+
+    <TextView
+        android:id="@+id/idTv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:text="id"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tag_data"
+        tools:text="id view" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
