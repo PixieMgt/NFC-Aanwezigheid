@@ -34,11 +34,13 @@ class WritableTag @Throws(FormatException::class) constructor(tag: Tag) {
             ndef = Ndef.get(tag)
             ndefFormatable = null
         } else if (tagTechs.contains(NDEF_FORMATABLE)) {
-            Log.i("WritableTag", "contains ndef_formatable")
+            Log.i("WritableTag", "contains ndef_formatable ")
             ndefFormatable = NdefFormatable.get(tag)
             ndef = null
         } else {
-            throw FormatException("Tag doesn't support ndef")
+            //throw FormatException("Tag doesn't support ndef")
+            ndef = Ndef.get(tag)
+            ndefFormatable = null
         }
     }
 
