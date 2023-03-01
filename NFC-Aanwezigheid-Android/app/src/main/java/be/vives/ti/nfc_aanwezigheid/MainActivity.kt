@@ -43,9 +43,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initViews() {
-        write_tag.setOnClickListener {
+        /*write_tag.setOnClickListener {
             writeNDefMessage()
-        }
+        }*/
     }
 
     private fun writeNDefMessage() {
